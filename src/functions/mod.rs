@@ -97,13 +97,26 @@ pub mod closure {
         f(3)
     }
 
-    fn test_closure_as_input_params()
+    pub fn test_closure_as_input_params()
     {
         use std::mem;
 
         let greeting = "hello";
         let mut farewell = "goodbye".to_owned();
 
+        let dairy = || {
+            println!("I said {}.", greeting);
 
+            farewell.push_str("!!!");
+            println!("Then I screamed {}.", farewell);
+            println!("Now I can sleep. zzzzzzzzzzzzzzz");
+
+            mem::drop(farewell);
+        };
+
+        apply(dairy);
+
+        let double = |x| 2 * x;
+        println!("3 doubled: {}", apply_to_3(double));
     }
 }
