@@ -100,3 +100,15 @@ pub fn test_move()
     // vec is already moved. if move is removed, following code line will be worked.
     // println!("There are {} elements in vec", haystack.len());
 }
+
+pub fn test_std_fn()
+{
+    let vec1 = vec![1, 2, 3, 4];
+    let vec2 = vec![5, 6, 7, 8];
+
+    println!("2 in vec1: {}", vec1.iter().any(|&x| x == 2));
+    println!("2 in vec1: {}", vec2.iter().any(|&x| x == 2));
+
+    let arr1 = [1, 2, 3, 4];
+    println!("2 in arr1: {}", arr1.iter().any(|&x| x == 2));
+}
