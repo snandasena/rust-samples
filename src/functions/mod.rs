@@ -1,6 +1,7 @@
 mod captures;
 mod methods;
 mod hof;
+mod diverging_func;
 
 pub fn test_methods()
 {
@@ -21,4 +22,7 @@ pub fn test_hof()
     hof::test_hof();
 }
 
-
+pub fn test_diverging()
+{
+    diverging_func::func();
+}
