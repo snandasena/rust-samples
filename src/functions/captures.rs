@@ -1,5 +1,3 @@
-use std::mem;
-
 pub fn test_closure() {
     let outer_var = 42;
 
