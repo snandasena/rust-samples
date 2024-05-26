@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m  $1
-git push origin $2
+git commit -m  "`git status -s`"
+git push origin dev
