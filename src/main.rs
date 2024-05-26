@@ -12,6 +12,8 @@ fn test_functions()
 fn test_modules()
 {
     modules::test_visibility();
+    modules::test_declaration();
+    modules::test_self_n_super();
 }
 
 fn main() {
