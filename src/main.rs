@@ -1,5 +1,7 @@
 mod functions;
 mod modules;
+mod my_crate;
+
 
 fn test_functions()
 {
@@ -16,7 +18,15 @@ fn test_modules()
     modules::test_self_n_super();
 }
 
+#[cfg(target_os = "linux")]
+fn are_you_on_linux()
+{
+    println!("You are on linux!");
+}
+
 fn main() {
+    are_you_on_linux();
+
     test_functions();
     test_modules();
 }
