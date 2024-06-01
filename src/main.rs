@@ -1,6 +1,7 @@
 mod functions;
 mod modules;
 mod my_crate;
+mod generics;
 
 
 fn test_functions()
@@ -24,9 +25,22 @@ fn are_you_on_linux()
     println!("You are on linux!");
 }
 
+fn test_generic_functions()
+{
+    generics::test_function();
+}
+
+fn test_generic_impl()
+{
+    generics::test_impl();
+}
+
 fn main() {
     are_you_on_linux();
 
     test_functions();
     test_modules();
+
+    test_generic_functions();
+    test_generic_impl();
 }
