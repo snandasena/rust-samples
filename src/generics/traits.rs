@@ -57,6 +57,18 @@ impl Animal for Sheep {
 }
 
 
+struct Empty;
+
+struct Null;
+
+trait DoubleDrop<T> {
+    fn double_drop(self, _: T);
+}
+
+impl<T, U> DoubleDrop<T> for U {
+    fn double_drop(self, _: T) {}
+}
+
 pub fn test_generic_traits()
 {
     let mut dolly: Sheep = Animal::new("Dolly");
@@ -64,4 +76,12 @@ pub fn test_generic_traits()
     dolly.talk();
     dolly.shear();
     dolly.talk();
+
+    /////
+    let empty = Empty;
+    let null = Null;
+
+    empty.double_drop(null);
 }
+
+
