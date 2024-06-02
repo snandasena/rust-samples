@@ -25,15 +25,14 @@ fn are_you_on_linux()
     println!("You are on linux!");
 }
 
-fn test_generic_functions()
+fn test_generics()
 {
     generics::test_function();
+    generics::test_impl();
+    generics::test_traits();
+    generics::test_bounds();
 }
 
-fn test_generic_impl()
-{
-    generics::test_impl();
-}
 
 fn main() {
     are_you_on_linux();
@@ -41,6 +40,5 @@ fn main() {
     test_functions();
     test_modules();
 
-    test_generic_functions();
-    test_generic_impl();
+    test_generics();
 }
