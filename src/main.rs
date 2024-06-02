@@ -30,6 +30,7 @@ fn test_generics()
     generics::test_function();
     generics::test_impl();
     generics::test_traits();
+    generics::test_bounds();
 }
 
 
